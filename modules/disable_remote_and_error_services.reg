@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Disable Remote Registry service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RemoteRegistry]
+"Start"=dword:00000004
+
+; Disable Windows Error Reporting Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WerSvc]
+"Start"=dword:00000004

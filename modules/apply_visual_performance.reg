@@ -1,0 +1,103 @@
+Windows Registry Editor Version 5.00
+
+; 1. Set mode to Custom
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects]
+"VisualFXSetting"=dword:00000003
+
+; 2. Enforce system mask (Byte 5 adjusted to 12 to force control animations)
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"UserPreferencesMask"=hex:90,12,01,80,12,00,00,00
+"MenuAnimation"="0"
+"TooltipAnimation"="0"
+"ComboBoxAnimation"="0"
+"ListBoxAnimation"="0"
+"DragFullWindows"="1"
+"FontSmoothing"="2"
+"FontSmoothingType"=dword:00000002
+
+[HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
+"MinAnimate"="1"
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"TaskbarAnimations"=dword:00000000
+"IconsOnly"=dword:00000001
+"ListviewSmooth"=dword:00000000
+"ListviewAlphaSelect"=dword:00000001
+"ListviewShadow"=dword:00000000
+
+; ====================================================================
+; FORCE EXPLICIT UI CHECKBOXES (THE 5 YOU WANT ENABLED)
+; ====================================================================
+
+; -> Animate controls and elements inside windows
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\ControlAnimations]
+"DefaultApplied"=dword:00000001
+
+; -> Animate windows when minimizing and maximizing
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\AnimateMinMax]
+"DefaultApplied"=dword:00000001
+
+; -> Show translucent selection rectangle
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\ListviewAlphaSelect]
+"DefaultApplied"=dword:00000001
+
+; -> Show window contents while dragging
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\DragFullWindows]
+"DefaultApplied"=dword:00000001
+
+; -> Smooth edges of screen fonts
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\FontSmoothing]
+"DefaultApplied"=dword:00000001
+
+
+; ====================================================================
+; FORCE DISABLED FOR ALL OTHER OPTIONS SHOWN IN THE WINDOW
+; ====================================================================
+
+; -> Animations in the taskbar
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\TaskbarAnimations]
+"DefaultApplied"=dword:00000000
+
+; -> Enable Peek (Fixes the accidental check from image_7d277e.png)
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\DWMAeroPeekEnabled]
+"DefaultApplied"=dword:00000000
+
+; -> Fade or slide menus into view
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\MenuAnimation]
+"DefaultApplied"=dword:00000000
+
+; -> Fade or slide ToolTips into view
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\TooltipAnimation]
+"DefaultApplied"=dword:00000000
+
+; -> Fade out menu items after clicking
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\SelectionFade]
+"DefaultApplied"=dword:00000000
+
+; -> Save taskbar thumbnail previews
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\DWMSaveThumbnailEnabled]
+"DefaultApplied"=dword:00000000
+
+; -> Show shadows under mouse pointer
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\CursorShadow]
+"DefaultApplied"=dword:00000000
+
+; -> Show shadows under windows
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\DropShadow]
+"DefaultApplied"=dword:00000000
+
+; -> Show thumbnails instead of icons (Fixes the accidental check from image_7d277e.png)
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\ThumbnailsOrIcon]
+"DefaultApplied"=dword:00000000
+
+; -> Slide open combo boxes
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\ComboBoxAnimation]
+"DefaultApplied"=dword:00000000
+
+; -> Smooth-scroll list boxes
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\ListBoxSmoothScrolling]
+"DefaultApplied"=dword:00000000
+
+; -> Use drop shadows for icon labels on the desktop (Fixes the accidental check from image_7d277e.png)
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\VisualEffects\ListviewShadow]
+"DefaultApplied"=dword:00000000

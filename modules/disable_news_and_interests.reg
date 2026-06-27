@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Turn off News and Interests on the taskbar for all users
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Feeds]
+"EnableFeeds"=dword:00000000
+
+; Current user taskbar configuration (Turns it to "Hidden")
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Feeds]
+"ShellFeedsTaskbarViewMode"=dword:00000002

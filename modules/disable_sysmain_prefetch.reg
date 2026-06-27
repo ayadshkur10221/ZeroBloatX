@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Disable SysMain (Superfetch) Service completely
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SysMain]
+"Start"=dword:00000004
+
+; Disable Prefetcher and ReadyBoot
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters]
+"EnablePrefetcher"=dword:00000000
+"EnableSuperfetch"=dword:00000000

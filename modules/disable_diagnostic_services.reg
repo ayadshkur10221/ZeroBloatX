@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+; Disable Diagnostic Execution Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagSvc]
+"Start"=dword:00000004
+
+; Disable Connected User Experiences and Telemetry Service (Duplicate check)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DiagTrack]
+"Start"=dword:00000004
+
+; Disable WAP Push Message Routing Service (Telemetry asset)
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\dmwappushservice]
+"Start"=dword:00000004

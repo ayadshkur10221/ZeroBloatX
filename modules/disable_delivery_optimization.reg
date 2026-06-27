@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Force system to pull updates strictly from Microsoft servers, disabling peer-to-peer sharing
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DeliveryOptimization]
+"DODownloadMode"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DeliveryOptimization\Config]
+"DODownloadMode"=dword:00000000

@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+
+; 1. Disable Automatic Windows Updates (Notify before download/install)
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU]
+"NoAutoUpdate"=dword:00000001
+"AUOptions"=dword:00000002
+"ScheduledInstallDay"=dword:00000000
+"ScheduledInstallTime"=dword:00000000
+
+; 2. Stop Windows from automatically installing driver updates
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DriverSearching]
+"SearchOrderConfig"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching]
+"SearchOrderConfig"=dword:00000000
+
+; 3. Disable the Windows Update background Orchestrator Service
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\UsoSvc]
+"Start"=dword:00000004
